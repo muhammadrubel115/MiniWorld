@@ -1,0 +1,98 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="{% static 'minigen/css/notification.css'%}  "> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" > 
+   
+    <title> Home </title>
+</head>
+
+<body>
+
+<div class="container-fluid">
+    <div class="container">    
+        <div class="menu">
+            
+            <div class="mini-home">
+                <Button type="button" > MiniWorld </button>
+            </div>
+            <div class="menu-home">
+                <Button type="button" onclick="location.href='{% url 'home' %}'">
+                    <i class="fa-solid fa-house" style="color: #1378DA;"></i> 
+                </button>
+            </div>
+            <div class="menu-home">
+                <Button type="button" onclick="location.href='{% url 'postmcq' %}'">
+                    <i class="fa-solid fa-square-plus" style="color: #1378DA;"></i> 
+                </button>
+            </div>
+        
+            <div class="menu-home">
+                <Button type="button" onclick="location.href='{% url 'notification' %}'">
+                    <i class="fa-solid fa-bell" style="color: #1378DA;"></i> 
+                </button>
+            </div>
+            <div class="menu-home">
+                <Button type="button" onclick="location.href='{% url 'search' %}'">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #1378DA;"></i> 
+                </button>
+            </div>
+            <div class="menu-home">
+                <Button type="button" onclick="location.href='{% url 'profile' %}'">
+                    <i class="fa-solid fa-circle-user" style="color: #1378DA;"></i> 
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+ 
+
+
+
+
+
+<div class="container-fluid">
+    <div class="container">
+        <h2>Notifications</h2>
+        <ul class="notifications-list">
+            {% for notification in notifications %}
+                <li class="{% if not notification.is_read %}unread{% endif %}">
+                    <div class="centre-middle-top">
+                        <div class="centre-middle-top-profile-image">
+                            {% if notification.follower.profileinfo.image %}
+                                <img src="{{ notification.follower.profileinfo.image.url }}" alt="{{ notification.follower.username }}'s profile picture" class="profile-image">
+                            {% else %}
+                                <img src="{% static 'minigen/images/default_profile.png' %}" alt="Default profile picture" class="profile-image">
+                            {% endif %}
+                        </div>
+                        <div class="centre-middle-top-profile-info">
+                            <a href="{% url 'profile_view' notification.follower.username %}"> {{ notification.follower.username }} </a>
+                            <p>{{ notification.message }}</p>
+                            <small>{{ notification.created_at }}</small>
+                        </div>
+                    </div>
+                </li>
+            {% empty %}
+                <li>No notifications</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+</div>        
+
+
+
+</body>
+</html>

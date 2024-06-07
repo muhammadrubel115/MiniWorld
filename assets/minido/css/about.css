@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {  
+    border: 1px solid #FFFAFF;
+}
+
+a:link, a:visited {
+    background-color: #FFFAFF;        
+    color: black;   
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+}
+      
+a:hover, a:active {
+    background-color: #FFFAFF;
+    color: blue;        
+}
+
+.container-fluid {
+    
+    border: 1px solid #FAF9FE;
+    width: 100%;
+    border-radius: 1%;   
+}
+
+.container {
+    background-color:#FAF9FE;
+    border: none;
+    width: 98%;
+    margin-left: 1%;
+    float: left;
+}
+
+.menu {
+    display: inline-block;
+    background-color: #FAF9FE;
+    width: 98%;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    margin-left: 1%;
+}
+
+.mini-home {
+    background-color: #FAF9FE;
+    width: 20%;
+    margin-left: 1%;
+    float: left;
+    border: 1px solid #FAF9FE;
+}
+
+.mini-home button {
+    background-color: #FAF9FE;
+    width: 100%;
+    font-family: 'Roboto';
+    font-size: 2.5vw;
+    text-align: center;
+    border: 1px solid #FAF9FE;
+    border: none;   
+}
+
+.mini-home button:active {
+    background-color: #FAF9FE;
+}
+
+.mini-home button:hover {
+    background-color: #1378DA;
+    border: 1px solid #FAF9FE;
+    color: #FAF9FE;
+}
+
+
+
+.menu-home {
+    background-color: #FAF9FE;
+    width: 10%;
+    margin-left: 5%;
+    float: left;
+}
+
+.menu-home button {
+    background-color: #FAF9FE;
+    width: 100%;
+    font-size: 2.8vw;
+    text-align: center;
+    border: none;
+    
+}
+
+
+
+.menu-home button:active {
+    background-color: #FAF9FE;
+}
+
+.menu-home button:hover {
+    background-color: lightgreen;
+}
+
+.ref {
+    background-color: #FAF9FE;
+    overflow: visible;
+    width: 98%;
+    border: 1px solid #FAF9FE;
+    margin-top: 1%;
+    margin-left: 1%;
+    display: inline-block;
+}
+.tags {
+    background-color: #FAF9FE;
+    overflow: visible;
+    width: 100%;
+    border: 1px solid #FAF9FE;
+    margin-top: 0%;
+    margin-left: 0%;
+    display: inline-block;    
+}
+
+.tags button {
+    background-color: #FAF9FE;
+    width: auto;
+    border: 1px solid #FAF9FE;
+    font-size: 1.6vw;
+    font-family: 'Roboto';
+    font-weight: normal;
+    float: left;
+    margin-left: 1%;
+    margin-bottom: 0%;
+    margin-top: 0%;
+}
+
+.tags button:hover {
+    background-color: #1378DA;
+    border: 1px solid #FAF9FE;
+    color: #FAF9FE;
+}
+
+.centre {
+    background-color: #FAF9FE;
+    width: 100%;
+    overflow: visible;
+}
+
+.centre-left{
+    background-color: #FAF9FE;
+    overflow: hidden;
+    width: 27%;
+    float: left;
+    margin-top: 1%;
+    margin-left: 2%;
+}
+
+.centre-left-top {
+    background-color: #FAF9FE;
+    overflow: visible;
+    width: 98%;
+    margin-top: 0%;
+    margin-left: 1%;
+}
+
+.centre-left-top h1 {
+    background-color: #FAF9FE;
+    overflow: visible;
+    width: 98%;
+    margin-top: 0%;
+    margin-left: 0%;
+    font-size: 2.5vw;
+    font-family: 'Roboto';
+    font-weight: normal;
+}
+
+
+.centre-middle {
+    overflow: hidden;
+    background-color: #FAF9FE;
+    display: inline;
+    width: 67%;
+    float: left;
+    margin-top: 1%;
+    margin-left: 2%;
+}
+    
+.centre-middle-top {
+    background-color: #FAF9FE;
+    overflow: visible;
+    width: 98%;
+    margin-top: 0%;
+    margin-left: 1%;
+}
+
+.centre-middle-top p {
+    background-color: #FAF9FE;
+    overflow: visible;
+    width: 100%;
+    margin-top: 1%;
+    margin-left: 0%;
+    font-size: 2.5vw;
+    font-family: 'Roboto';
+    font-weight: normal;
+    text-align: center;
+}
+
+.centre-middle-body {
+    background-color: #FAF9FE;
+    overflow: visible;
+    width: 98%;
+    margin-top: 0%;
+    margin-left: 1%;
+}
+
+.centre-middle-body p {
+    background-color: #FAF9FE;
+    overflow: visible;
+    width: 100%;
+    margin-top: 1%;
+    margin-left: 0%;
+    font-size: 2vw;
+    font-family: 'Roboto';
+    font-weight: normal;
+    text-align: center;
+}
+
+.bottom {
+    display: inline-block;
+    background-color: #FAF9FE;
+    width: 98%;
+    margin-top: 5%;
+    margin-bottom: 1%;
+    margin-left: 1%;
+}
+
+.bottom-content {
+    background-color: #FAF9FE;
+    overflow: visible;
+    width: 98%;
+    margin-top: 0%;
+    margin-left: 1%;
+}
+
+
+
+.bottom-content a {
+    background-color: #FAF9FE;
+    overflow: visible;
+    width: auto;
+    margin-top: 1%;
+    margin-left: 5%;
+    margin-bottom: 1%;
+    font-size: 1.6vw;
+    font-family: 'Roboto';
+    font-weight: normal;
+    color: black;
+    border: 1px solid #FAF9FE;
+}
+
+.bottom-content a:hover {
+    background-color: #1378DA;
+    border: 1px solid #FAF9FE;
+    color: #FAF9FE;
+}

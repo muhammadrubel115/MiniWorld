@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {  
+    border: 1px solid #FFFAFF;
+}
+
+a:link, a:visited {
+    background-color: #FFFAFF;        
+    color: black;   
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+}
+      
+a:hover, a:active {
+    background-color: #FFFAFF;
+    color: blue;        
+}
+
+.container-fluid {
+    
+    border: 1px solid #FAF9FE;
+    width: 100%;
+    border-radius: 1%;   
+}
+
+.container {
+    background-color:#FAF9FE;
+    border: none;
+    width: 98%;
+    margin-left: 1%;
+    float: left;
+}
+
+.menu {
+    display: inline-block;
+    background-color: #FAF9FE;
+    width: 98%;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    margin-left: 1%;
+}
+
+.mini-home {
+    background-color: #FAF9FE;
+    width: 20%;
+    margin-left: 1%;
+    float: left;
+    border: 1px solid #FAF9FE;
+}
+
+.mini-home button {
+    background-color: #FAF9FE;
+    width: 100%;
+    font-family: 'Roboto';
+    font-size: 2.5vw;
+    text-align: center;
+    border: 1px solid #FAF9FE;
+    border: none;   
+}
+
+.mini-home button:active {
+    background-color: #FAF9FE;
+}
+
+.mini-home button:hover {
+    background-color: #1378DA;
+    border: 1px solid #FAF9FE;
+    color: #FAF9FE;
+}
+
+
+
+.menu-home {
+    background-color: #FAF9FE;
+    width: 10%;
+    margin-left: 5%;
+    float: left;
+}
+
+.menu-home button {
+    background-color: #FAF9FE;
+    width: 100%;
+    font-size: 2.8vw;
+    text-align: center;
+    border: none;
+    
+}
+
+.menu-home button:active {
+    background-color: #FAF9FE;
+}
+
+.menu-home button:hover {
+    background-color: lightgreen;
+}
+
+
+
+.centre {
+    background-color: #FAF9FE;
+    width: 100%;
+    overflow: visible;
+}
+
+
+.centre-middle {
+    overflow: hiddesn;
+    background-color: #FAF9FE;
+    display: inline;
+    width: 50%;
+    float: left;
+    margin-top: 1%;
+    margin-left: 25%;
+}
+
+.mcq-form {
+    background-color:#FAF9FE;
+    overflow: visible;
+    width: 100%;
+    margin-top: 1%;
+    margin-left: 0%;
+    border: none;
+}
+
+.mcq-form input {
+    background-color: #FAF9FE;
+    width: 90%;
+    height: auto;
+    margin-left: 5%;
+    margin-top: 0%;
+    border:1px solid black;
+    color: black;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2vw;
+    text-align: left;
+}
+
+.mcq-form label {
+    background-color: #FAF9FE;
+    width: 90%;
+    height: auto;
+    margin-left: 5%;
+    margin-top: 0%;
+    border-color: #E7D3AE;
+    color: black;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2vw;
+    text-align: left;
+}
+
+.mcq-form button {
+    background-color: #FAF9FE;
+    overflow: visible;
+    width: 50%;
+    margin-top: 3%;
+    margin-left: 25%;
+    margin-bottom: 3%;
+    font-size: 2vw;
+    font-family: 'Roboto';
+    font-weight: normal;
+    border-radius: 20%;
+    border: 1px solid black;
+}
+
+.mcq-form button:hover {
+    background-color: #1378DA;
+    border: 1px solid #FAF9FE;
+    color: #FAF9FE;
+}
+
+

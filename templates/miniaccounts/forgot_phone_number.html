@@ -1,0 +1,210 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="{% static 'miniaccounts/css/forgot_phone_number.css'%}  "> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" > 
+   
+    <title> {% block tittle %} Forgot Phone Number {% endblock %} </title>
+</head>
+
+<body>
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="container">    
+        <div class="menu">
+            
+            <div class="mini-home">
+                <Button type="button"> MiniWorld </button>
+            </div>
+            <div class="menu-home">
+                <Button type="button" onclick="location.href='{% url 'home' %}'">
+                    <i class="fa-solid fa-house" style="color: #1378DA;"></i> 
+                </button>
+            </div>
+            <div class="menu-home">
+                <Button type="button" onclick="location.href='{% url 'postmcq' %}'">
+                    <i class="fa-solid fa-square-plus" style="color: #1378DA;"></i> 
+                </button>
+            </div>
+        
+            <div class="menu-home">
+                <Button type="button" onclick="location.href='{% url 'notification' %}'">
+                    <i class="fa-solid fa-bell" style="color: #1378DA;"></i> 
+                </button>
+            </div>
+            <div class="menu-home">
+                <Button type="button" onclick="location.href='{% url 'search' %}'">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #1378DA;"></i> 
+                </button>
+            </div>
+            <div class="menu-home">
+                <Button type="button" onclick="location.href='{% url 'profile' %}'">
+                    <i class="fa-solid fa-circle-user" style="color: #1378DA;"></i> 
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        
+<div class="centre">
+        
+    <div class="centre-left">
+        
+        <div class="container-fluid">
+
+            <div class="container">
+                <div class="centre-left-top">
+                    <h1> Social Login </h1><hr>
+                    <button type="button"> Sign In With Google </button>
+                    <button type="button"> Sign In With Facebook </button>
+                    <button type="button"> Sign In With Twitter </button>
+                    <button type="button"> Sign In With Instagram </button><br>      
+                </div>
+            </div>
+    
+            
+        </div>
+
+    </div>
+ 
+    
+    <div class="centre-middle">
+
+        <div class="container-fluid">
+
+            <div class="container">
+                <div class="centre-middle-top">
+                    <p>  Forgot Phone Number ? </p>
+                    <br> <hr> 
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="centre-middle-middle">
+                    <br>
+                    <form action="#" method="post">
+
+                        <div class="signin-form">
+                            <label for="email">  Email: </label> <br>
+                            <input type="email" id="email" name="email" required> <br>
+                        </div>
+
+                        <div class="signin-form">
+                            <label for="password">  Password: </label> <br>
+                            <input type="text" id="password" name="password" required> <br>
+                        </div>
+                        
+                        <div class="signin-form">
+                            <button type="submit"> Sign Up </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>        
+    
+    <div class="centre-right">
+
+       <div class="containter-fluid">
+            
+            <div class="container">
+                <div class="centre-right-top">
+                    <h1> Top Profiles </h1>
+                    <hr> 
+                </div>
+            </div>
+            
+       </div>
+
+       <div class="container-fluid">
+            <div class="container">
+                <div class="centre-right-middle">
+                    <div class="centre-right-middle-profile-image">
+                        <img src="{% static 'minigen/images/teacher1.webp'%} ">
+                    </div>
+                        
+                    <div class="centre-right-middle-profile-info">
+                        <a href="#"> Mohammad Rubel </a>
+                        <button type="submit"> Follow </button>
+                        <p> Bangladesh &#x2022; Person &#x2022; 1.5k </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="centre-right-middle">
+                    <div class="centre-right-middle-profile-image">
+                        <img src="{% static 'minigen/images/teacher3.webp'%}">
+                    </div>
+                        
+                    <div class="centre-right-middle-profile-info">
+                        <a href="#"> Mohammad Arman Hossain </a>
+                        <button type="submit"> Follow </button>
+                        <p> Bangladesh &#x2022; Person &#x2022; 1.9k </p>
+                    </div>
+                </div>
+            </div>
+
+             <div class="container">
+                <div class="centre-right-middle">
+                    <div class="centre-right-middle-profile-image">
+                        <img src="{% static 'minigen/images/course1.webp'%} ">
+                    </div>
+                        
+                    <div class="centre-right-middle-profile-info">
+                        <a href="#"> General Mathematics </a>
+                        <button type="submit"> Follow </button>
+                        <p> Bangladesh &#x2022; Book &#x2022; 1.9k </p>
+                    </div>
+                </div>
+            </div>
+
+             <div class="container">
+                <div class="centre-right-middle">
+                    <div class="centre-right-middle-profile-image">
+                        <img src="{% static 'minigen/images/course2.webp'%} ">
+                    </div>
+                        
+                    <div class="centre-right-middle-profile-info">
+                        <a href="#"> General Mathematics </a>
+                        <button type="submit"> Follow </button>
+                        <p> Bangladesh &#x2022; Book &#x2022; 1.9k </p>
+                    </div>
+                </div>
+            </div>
+            
+       </div>
+    </div>
+</div>
+ 
+<div class="bottom">
+    <div class="container-fluid">
+        <div class="container">
+                <div class="bottom-content">  
+                   <a href="{% url 'privacy_policy' %}"> Privacy Policy </a>
+                    <a href="{% url 'terms_and_conditions' %}"> Terms & Conditions </a>
+                    <a href="{% url 'cookies'%}"> Cookies </a>
+                    <a href="{% url 'faq'%}"> FAQ </a>
+                    <a href="{% url 'developers'%}"> Developers </a>
+                    <a href="{% url 'about'%}"> About </a>
+                </div>   
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+</body>
+</html>

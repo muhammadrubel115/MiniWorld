@@ -1,0 +1,114 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="{% static 'minigen/css/postmcq.css'%}"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" > 
+   
+    <title> Post MCQ </title>
+</head>
+
+<body>
+
+<div class="container-fluid">
+    <div class="container">    
+        <div class="menu">
+            <div class="mini-home">
+                <Button type="button" > MiniWorld </button>
+            </div>
+            <div class="menu-home">
+                <Button type="button" onclick="location.href='{% url 'home' %}'">
+                    <i class="fa-solid fa-house" style="color: #1378DA;"></i> 
+                </button>
+            </div>
+            <div class="menu-home">
+                <Button type="button" onclick="location.href='{% url 'postmcq' %}'">
+                    <i class="fa-solid fa-square-plus" style="color: #1378DA;"></i> 
+                </button>
+            </div>
+        
+            <div class="menu-home">
+                <Button type="button" onclick="location.href='{% url 'notification' %}'">
+                    <i class="fa-solid fa-bell" style="color: #1378DA;"></i> 
+                </button>
+            </div>
+            <div class="menu-home">
+                <Button type="button" onclick="location.href='{% url 'search' %}'">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #1378DA;"></i> 
+                </button>
+            </div>
+            <div class="menu-home">
+                <Button type="button" onclick="location.href='{% url 'profile' %}'">
+                    <i class="fa-solid fa-circle-user" style="color: #1378DA;"></i> 
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        
+<div class="centre">
+    <div class="centre-middle">
+        <div class="container-fluid">
+            <div class="container">
+                
+                <form action="#" method="post">
+                    {% csrf_token %}
+
+                        <div class="mcq-form">
+                            <label for="question">  Question: </label> <br>
+                            <input type="text" id="question" name="question"  required> <br>
+                        </div>
+                        <div class="mcq-form">
+                            <label for="reference">  Reference: </label> <br>
+                            <input type="text" id="reference" name="reference"  required> <br>
+                        </div>
+                        <div class="mcq-form">
+                            <label for="option1">  Option 1: </label> <br>
+                            <input type="text" id="option1" name="option1"  required> <br>
+                        </div>
+                        <div class="mcq-form">
+                            <label for="option2">  Option 2: </label> <br>
+                            <input type="text" id="option2" name="option2"  required> <br>
+                        </div>
+                        <div class="mcq-form">
+                            <label for="option3">  Option 3: </label> <br>
+                            <input type="text" id="option3" name="option3"  required> <br>
+                        </div>
+                        <div class="mcq-form">
+                            <label for="option4">  Option 4: </label> <br>
+                            <input type="text" id="option4" name="option4"  required> <br>
+                        </div>
+                        <div class="mcq-form">
+                            <label for="description">  Description: </label> <br>
+                            <input type="text" id="description" name="description"  required> <br>
+                        </div>
+                        <div class="mcq-form">
+                                <label for="answer">Answer:</label>
+                                <select id="answer" name="answer" required>
+                                    <option value="option1">Option 1</option>
+                                    <option value="option2">Option 2</option>
+                                    <option value="option3">Option 3</option>
+                                    <option value="option4">Option 4</option>
+                                </select>
+                        </div>
+
+                        <div class="mcq-form">
+                            <button type="submit"> Post </button>
+                        </div>
+
+                </form>
+            </div>
+        </div>
+    </div>    
+</div>        
+    
+    
+
+</body>
+</html>

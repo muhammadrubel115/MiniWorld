@@ -1,0 +1,245 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="{% static 'minigen/css/mini.css'%}  "> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" > 
+   
+    <title> Mini </title>
+</head>
+
+<body>
+
+<div class="container-fluid">
+    <div class="container">    
+        <div class="menu">
+            
+            <div class="mini-home">
+                <Button type="button"> MiniWorld </button>
+            </div>
+            <div class="menu-home">
+                <Button type="button" onclick="location.href='{% url 'home' %}'">
+                    <i class="fa-solid fa-house" style="color: #1378DA;"></i> 
+                </button>
+            </div>
+            <div class="menu-home">
+                <Button type="button" onclick="location.href='{% url 'postmcq' %}'">
+                    <i class="fa-solid fa-square-plus" style="color: #1378DA;"></i> 
+                </button>
+            </div>
+        
+            <div class="menu-home">
+                <Button type="button" onclick="location.href='{% url 'notification' %}'">
+                    <i class="fa-solid fa-bell" style="color: #1378DA;"></i> 
+                </button>
+            </div>
+            <div class="menu-home">
+                <Button type="button" onclick="location.href='{% url 'search' %}'">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #1378DA;"></i> 
+                </button>
+            </div>
+            <div class="menu-home">
+                <Button type="button" onclick="location.href='{% url 'profile' %}'">
+                    <i class="fa-solid fa-circle-user" style="color: #1378DA;"></i> 
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+        
+<div class="centre">
+        
+    <div class="centre-left">
+        
+        <h1> Trending MCQ </h1><hr> 
+        
+        {% for dta2 in data2 %}
+        <div class="container-fluid">
+            
+            {% for dta1 in data1 %}    
+            <div class="container">
+                <div class="centre-left-top">
+                    <div class="centre-left-top-profile-image">
+                        <img src="{% static 'minigen/images/teacher1.webp'%}">
+                    </div>
+                        
+                    <div class="centre-left-top-profile-info">
+                        <a href="#"> {{ dta1.acc_name }} </a>
+                        <button type="submit"> Follow </button>
+                        <p> {{dta1.country}} &#x2022; {{dta1.acc_type}} &#x2022; 1.5k </p>
+                    </div>
+                </div>
+            </div>
+
+                    
+            <div class="container">
+
+                <div class="centre-left-top-post">
+                    <div class="centre-left-top-question">
+                        <p> {{dta2.mcq_question}}  </p>
+                        <span> {{dta2.mcq_reference}} </span> 
+                         
+                    </div>
+
+                    <div class="centre-left-top-mcq">
+                        <div>
+                            <label> <input type="radio"  name="option" value="option1"> {{dta2.mcq_option1}} </label>
+                        </div>
+                        <div>
+                            <label> <input type="radio" name="option" value="option2"> {{dta2.mcq_option2}} </label>
+                        </div>
+                        <div>
+                            <label> <input type="radio" name="option" value="option3"> {{dta2.mcq_option3}} </label>
+                        </div>
+                        <div>
+                            <label> <input type="radio" name="option" value="option4"> {{dta2.mcq_option4}} </label>
+                        </div>
+
+                        <div class="centre-left-top-mcqanswer">
+                            <p> {{dta2.mcq_answer}} </p> 
+                        </div>
+                            <button > Submit </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="centre-left-top-infos">
+                <div class="centre-left-top-user-follows">
+                    <div class="centre-left-top-user-follow-infos">352 | <i class="fa-solid fa-check" style="color: #74C0FC;"></i></div>
+                    <div class="centre-left-top-user-follow-infos">21 | <i class="fa-solid fa-xmark" style="color: #74C0FC;"></i></div>
+                    
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+
+    </div>
+ 
+    
+    <div class="centre-middle">
+        <div class="container-fluid">
+
+            <div class="container">
+                <div class="centre-middle-top">
+                    <div class="centre-middle-top-signup">
+                        <button type="submit" onclick="location.href='{% url 'register'%}' "> Create Account </button>
+                    </div>
+                    <h1> Sign In to Your Account </h1>
+                    <br> <hr> 
+                    {% if messages %}
+                        
+                        <p> {{ message }} </p>
+
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="centre-middle-middle">
+                    <br>
+                    <form  method="post">
+                        {% csrf_token %}
+                       <div class="signin-form">
+                            <label for="email">  Email: </label> <br>
+                            <input type="email" id="email" name="email" required> <br>
+                        </div>
+
+                         <div class="signin-form">
+                            <label for="password">  Password: </label> <br>
+                            <input type="password" id="password" name="password" required> <br>
+                        </div>
+                        <div class="signin-form">
+                            <button type="submit"> Sign In </button>
+                        </div>
+
+                    </form>
+                        <div class="centre-middle-top-signup">
+                            <button type="submit" onclick="location.href='{% url 'forgot_email' %}' "> Forgot Email </button>
+                        </div>
+                        <div class="centre-middle-top-signup">
+                            <button type="submit" onclick="location.href='{% url 'forgot_password' %}' "> Forgot Password </button>
+                        </div>
+                </div>
+            </div>
+
+        </div>    
+    </div>
+            
+    
+    <div class="centre-right">
+
+       <div class="containter-fluid">
+            
+            <div class="container">
+                <div class="centre-right-top">
+                    <h1> Top Profiles </h1>
+                    <hr> 
+                </div>
+            </div>
+            
+       </div>
+
+        
+       <div class="container-fluid">
+         {% for user in users %}    
+            <div class="container">
+            {% with user.profileinfo as profile %}
+                <div class="centre-right-middle">
+                    
+                    <div class="centre-right-middle-profile-image">
+                       
+                            {% if profile.image %}
+                                <img src="{{ profile.image.url }}" alt="Profile Picture">
+                            {% else %}
+                                <p>No profile picture available</p>
+                            {% endif %}
+                    </div>
+                        
+                    <div class="centre-right-middle-profile-info">
+                        <a href="{% url 'profile_view' user.username %}">{{ user.username }}</a>
+                       {% if request.user in profile.followers.all %}
+                                <form  method="post">
+                                    {% csrf_token %}
+                                    <button type="submit">Unfollow</button>
+                                </form>
+                            {% else %}
+                                <form  method="post">
+                                    {% csrf_token %}
+                                    <button type="submit">Follow</button>
+                                </form>
+                        {% endif %}
+                        <p> {{ profile.country }}&#x2022; {{ profile.acc_type }} &#x2022; 1.5k </p>
+                    </div>
+                </div>
+
+                 {% endwith %}
+                
+            </div>
+        {% endfor %}     
+        </div>  
+</div>
+ 
+<div class="bottom">
+    <div class="container-fluid">
+        <div class="container">
+                <div class="bottom-content">  
+                    <a href="{% url 'privacy_policy' %}"> Privacy Policy </a>
+                    <a href="{% url 'terms_and_conditions' %}"> Terms & Conditions </a>
+                    <a href="{% url 'cookies'%}"> Cookies </a>
+                    <a href="{% url 'faq'%}"> FAQ </a>
+                    <a href="{% url 'developers'%}"> Developers </a>
+                    <a href="{% url 'about'%}"> About </a>
+                </div>   
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
